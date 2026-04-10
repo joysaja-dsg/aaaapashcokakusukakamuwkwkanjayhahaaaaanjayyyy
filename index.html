@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Joy Wardana</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="navbar">
+  <div class="brand">Joy Wardana</div>
+  <input type="text" id="search" placeholder="Search..." onkeyup="loadImages()">
+  <div onclick="login()">☰</div>
+</div>
+
+<div class="tabs">
+  <div onclick="setCategory('all')">All</div>
+  <div onclick="setCategory('anime')">Anime</div>
+  <div onclick="setCategory('game')">Game</div>
+</div>
+
+<div class="social">
+  <img id="yt">
+  <img id="dc">
+  <img id="sp">
+</div>
+
+<div id="gallery"></div>
+
+<!-- ADMIN -->
+<div id="adminPanel" class="panel hidden">
+  <h3>ADMIN</h3>
+  <input type="file" id="file">
+  <input type="text" id="title" placeholder="Judul">
+  <input type="text" id="link" placeholder="Link">
+  <input type="text" id="category" placeholder="Kategori">
+  <button onclick="upload()">Upload</button>
+
+  <input type="file" id="bgFile">
+  <button onclick="uploadBG()">Background</button>
+
+  <input type="file" id="logoFile">
+  <button onclick="uploadLogo()">Logo</button>
+
+  <input type="text" id="ytLink" placeholder="YouTube">
+  <input type="text" id="dcLink" placeholder="Discord">
+  <input type="text" id="spLink" placeholder="Support">
+  <button onclick="saveSocial()">Save</button>
+
+  <button onclick="logout()">Logout</button>
+</div>
+
+<!-- POPUP -->
+<div id="popup" class="popup hidden">
+  <span onclick="closePopup()">✖</span>
+  <img id="popImg">
+  
+  <div id="actionBox"></div>
+  <div id="commentBox"></div>
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-storage.js"></script>
+
+<script src="script.js"></script>
+</body>
+</html>

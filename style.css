@@ -1,0 +1,80 @@
+body{
+  margin:0;
+  background:#0a0a0a;
+  color:white;
+  font-family:sans-serif;
+}
+
+.navbar{
+  display:flex;
+  justify-content:space-between;
+  padding:10px;
+  background:#111;
+}
+
+.tabs{
+  display:flex;
+  gap:10px;
+  padding:10px;
+}
+
+.tabs div{
+  background:#222;
+  padding:5px 10px;
+  border-radius:5px;
+  cursor:pointer;
+}
+
+#gallery{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(140px,1fr));
+  gap:10px;
+  padding:10px;
+}
+
+.card{
+  position:relative;
+}
+
+.card img{
+  width:100%;
+  border-radius:10px;
+}
+
+.overlay{
+  position:absolute;
+  bottom:0;
+  background:#000a;
+  width:100%;
+  font-size:12px;
+}
+
+.popup{
+  position:fixed;
+  width:100%;
+  height:100%;
+  background:#000c;
+}
+
+.popup img{
+  width:80%;
+  margin:10%;
+}
+
+.panel{
+  position:fixed;
+  width:250px;
+  height:100%;
+  background:#111;
+}
+
+.hidden{display:none;}
+
+#actionBox button{
+  margin:5px;
+}
+
+#commentBox{
+  max-height:150px;
+  overflow:auto;
+}
